@@ -1,9 +1,12 @@
 const express = require('express'); 
 const app = express(); 
+// sets port 8080 to default or unless otherwise specified in the environment
+app.set('port', process.env.PORT || 8080);
+
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));//used to access information coming in form
 app.use(express.json()) //used to read json input
-app.listen(3000);
+app.listen(app.get('port'));
 
 app.set('view engine', 'ejs'); 
 
