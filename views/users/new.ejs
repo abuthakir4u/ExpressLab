@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <form method="post" action="/users">
+            <label>First Name
+                <input type="text" name="firstName"
+                value="<%= locals.firstName %>" />
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
